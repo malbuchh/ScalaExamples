@@ -25,5 +25,13 @@ object lists {;import org.scalaide.worksheet.runtime.library.WorksheetSupport._;
 	thrill.length;System.out.println("""res14: Int = """ + $show(res$14));$skip(24); val res$15 = 
 	thrill.mkString(" , ");System.out.println("""res15: String = """ + $show(res$15));$skip(16); val res$16 = 
 	thrill.reverse;System.out.println("""res16: List[String] = """ + $show(res$16));$skip(13); val res$17 = 
-	thrill.tail;System.out.println("""res17: List[String] = """ + $show(res$17))}
+	thrill.tail;System.out.println("""res17: List[String] = """ + $show(res$17));$skip(48); 
+	
+	// TUPLES
+	
+	val pair = (99 , "Luftballons");System.out.println("""pair  : (Int, String) = """ + $show(pair ));$skip(18); 
+	println(pair._1);$skip(18); 
+	println(pair._2)}
+
+	
 	}

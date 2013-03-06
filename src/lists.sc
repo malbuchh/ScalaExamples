@@ -29,4 +29,12 @@ object lists {
 	thrill.mkString(" , ")                    //> res15: String = Will , fill , until
 	thrill.reverse                            //> res16: List[String] = List(until, fill, Will)
 	thrill.tail                               //> res17: List[String] = List(fill, until)
+	
+	// TUPLES
+	
+	val pair = (99 , "Luftballons")           //> pair  : (Int, String) = (99,Luftballons)
+	println(pair._1)                          //> 99
+	println(pair._2)                          //> Luftballons
+
+	
 	}
