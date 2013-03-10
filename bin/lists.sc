@@ -35,6 +35,29 @@ object lists {
 	val pair = (99 , "Luftballons")           //> pair  : (Int, String) = (99,Luftballons)
 	println(pair._1)                          //> 99
 	println(pair._2)                          //> Luftballons
+	
+	// SETS
+	// immuatable version, += yields new Set
+	var jetSet = Set("Boeing", "Airbus")      //> jetSet  : scala.collection.immutable.Set[String] = Set(Boeing, Airbus)
+	jetSet += "Lear"
+	println(jetSet.contains("Cessna"))        //> false
+	// mutable version with explicit name
+	val movieSet = scala.collection.mutable.Set("Hitch","Poltergeist")
+                                                  //> movieSet  : scala.collection.mutable.Set[String] = Set(Poltergeist, Hitch)
+	movieSet += "Shrek"                       //> res18: lists.movieSet.type = Set(Poltergeist, Shrek, Hitch)
+	println(movieSet)                         //> Set(Poltergeist, Shrek, Hitch)
+	
+	
+	// MAPS
+	import scala.collection.mutable.Map
+	val treasureMap = Map[Int, String]()      //> treasureMap  : scala.collection.mutable.Map[Int,String] = Map()
+	treasureMap += (1 -> "Go to island.")     //> res19: lists.treasureMap.type = Map(1 -> Go to island.)
+	treasureMap += (2 -> "Find big X on ground")
+                                                  //> res20: lists.treasureMap.type = Map(2 -> Find big X on ground, 1 -> Go to i
+                                                  //| sland.)
+	treasureMap += (3 -> "Dig")               //> res21: lists.treasureMap.type = Map(2 -> Find big X on ground, 1 -> Go to i
+                                                  //| sland., 3 -> Dig)
+	println(treasureMap(2))                   //> Find big X on ground
 
 	
 	}

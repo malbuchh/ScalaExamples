@@ -8,7 +8,7 @@ object types {
   
   val donaldsCage = new Cage(new Duck("Donald"))  //> donaldsCage  : types.Cage[types.Duck] = types$Cage@145c38c1
   // yields error since cannot put person in cage
-  // val merkelsCage = new Cage(new Person("Angela"))
+  // val merkelsCage = new Cage(new Person("Angela")))
  
  def operationFreedom(cage: Cage[Animal]) {
  	println(cage.animal + "is free now")
