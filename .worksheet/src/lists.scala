@@ -31,7 +31,26 @@ object lists {;import org.scalaide.worksheet.runtime.library.WorksheetSupport._;
 	
 	val pair = (99 , "Luftballons");System.out.println("""pair  : (Int, String) = """ + $show(pair ));$skip(18); 
 	println(pair._1);$skip(18); 
-	println(pair._2)}
+	println(pair._2);$skip(91); 
+	
+	// SETS
+	// immuatable version, += yields new Set
+	var jetSet = Set("Boeing", "Airbus");System.out.println("""jetSet  : scala.collection.immutable.Set[String] = """ + $show(jetSet ));$skip(18); 
+	jetSet += "Lear";$skip(36); 
+	println(jetSet.contains("Cessna"));$skip(107); 
+	// mutable version with explicit name
+	val movieSet = scala.collection.mutable.Set("Hitch","Poltergeist");System.out.println("""movieSet  : scala.collection.mutable.Set[String] = """ + $show(movieSet ));$skip(21); val res$18 = 
+	movieSet += "Shrek";System.out.println("""res18: lists.movieSet.type = """ + $show(res$18));$skip(19); 
+	println(movieSet)
+	
+	
+	// MAPS
+	import scala.collection.mutable.Map;$skip(88); 
+	val treasureMap = Map[Int, String]();System.out.println("""treasureMap  : scala.collection.mutable.Map[Int,String] = """ + $show(treasureMap ));$skip(39); val res$19 = 
+	treasureMap += (1 -> "Go to island.");System.out.println("""res19: lists.treasureMap.type = """ + $show(res$19));$skip(46); val res$20 = 
+	treasureMap += (2 -> "Find big X on ground");System.out.println("""res20: lists.treasureMap.type = """ + $show(res$20));$skip(29); val res$21 = 
+	treasureMap += (3 -> "Dig");System.out.println("""res21: lists.treasureMap.type = """ + $show(res$21));$skip(25); 
+	println(treasureMap(2))}
 
 	
 	}
